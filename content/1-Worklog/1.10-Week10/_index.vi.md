@@ -5,55 +5,34 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+## Mục tiêu tuần 10
 
+- Nghiên cứu quy chuẩn quản lý danh tính, phân tách và quản trị quyền hạn người dùng với AWS IAM.
+- Thiết lập hàng rào bảo mật, kích hoạt mã xác thực hai lớp (MFA) cho tài khoản gốc quản trị hệ thống đám mây.
+- Thực hành phân chia nhóm làm việc (IAM Groups) và người dùng phụ (IAM Users) theo triết lý bảo mật hạn chế quyền tối thiểu.
+- Thực hành phân bổ và liên kết mã khóa lập trình (Access Keys) phục vụ tương tác hệ thống dòng lệnh an toàn từ Windows.
 
-### Mục tiêu tuần 10:
+---
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+## Các công việc triển khai
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Nghiên cứu các lỗ hổng rủi ro an ninh thông tin khi lạm dụng tài khoản Root của AWS hàng ngày.<br>- Sử dụng điện thoại cá nhân cài đặt ứng dụng **Google Authenticator**, thực hiện quét mã cấu hình lớp bảo mật **MFA** xác thực tài khoản Root. | 22/06/2026 | 22/06/2026 | Tài liệu AWS IAM |
+| 3 | - Truy cập giao diện quản trị IAM Console, tiến hành tạo một cấu trúc nhóm làm việc mới mang tên `Developer-Group`.<br>- Tìm kiếm và thực hiện đính kèm chính sách quyền hạn giới hạn có sẵn của hệ thống đám mây mang tên `PowerUserAccess`. | 23/06/2026 | 23/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Thực hiện các bước tạo mới một tài khoản người dùng phụ đặt tên danh tính làm việc là `hoanganh-dev`.<br>- Tiến hành thêm người dùng này trực tiếp vào nhóm mạng `Developer-Group` để thừa hưởng toàn bộ danh mục quyền hạn quy định. | 24/06/2026 | 24/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Truy cập tab thông tin bảo mật của User phụ, tiến hành khởi tạo một cặp mã khóa lập trình dòng lệnh **Access Key** mới.<br>- Tải và thực hiện lưu trữ bảo mật file dữ liệu chứa thông tin khóa định dạng bảng `.csv` về ổ đĩa máy tính Windows cá nhân. | 25/06/2026 | 25/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - Mở cửa sổ **Windows PowerShell**, chạy lệnh cấu hình nạp thông số định danh để chuyển sang thao tác hoàn toàn bằng User phụ.<br>- Thực hành chạy thử các lệnh tạo tài nguyên và rà soát xử lý các lỗi chặn quyền truy cập bảo mật hệ thống mạng con. | 26/06/2026 | 26/06/2026 | https://cloudjourney.awsstudygroup.com/ |
 
+---
 
-### Kết quả đạt được tuần 10:
+## Kết quả đạt được
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Khóa và cô lập thành công hoàn toàn tài khoản tối cao Root Account bằng ứng dụng tạo mã số nhảy thời gian thực OTP Google Authenticator.
+- Quy hoạch phân tách phòng ban thành công trên Cloud qua Group `Developer-Group` sở hữu quyền hạn phát triển phần mềm rộng nhưng bị chặn tuyệt đối quyền can thiệp vào sửa đổi cấu trúc thẻ tín dụng hóa đơn tiền của tài khoản.
+- Khởi tạo thành công file lưu trữ dữ liệu thông tin định danh mật mã hệ thống đám mây (`credentials.csv`) chứa các chuỗi khóa phục vụ lập trình từ xa.
+- Thực hiện cấu hình nạp thông tin tài khoản phụ thành công vào nền tảng hệ điều hành Windows qua câu lệnh:
+  ```bash
+  aws configure
+  # Nạp chuỗi Access Key ID và Secret Access Key từ file csv
+  # Cấu hình Default region name: ap-southeast-1 | Default output format: json

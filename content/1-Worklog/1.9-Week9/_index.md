@@ -5,53 +5,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 9 Objectives
 
-### Week 9 Objectives:
+- Research Serverless (Function-as-a-Service) compute execution architectures with AWS Lambda.
+- Implement and author a cloud microservice function handler to run backend code logic natively.
+- Configure secure client endpoints, path routing, and request transformations using Amazon API Gateway.
+- Use Postman on Windows to execute, parse, and evaluate JSON schema payload data responses from serverless functions.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Implemented Tasks
 
+| Day | Task | Start Date | End Date | Resource / Documentation |
+|:---:|------|:----------:|:--------:|--------------------------|
+| Mon | - Learn about Event-Driven Architecture concepts using AWS Lambda compute runtimes.<br>- Analyze operational billing structures configured around exact processing time metrics (measured in milliseconds). | 15/06/2026 | 15/06/2026 | AWS Lambda Documentation |
+| Tue | - Open the Lambda console and create a new function entity named `hoanganh-get-product-detail` configured for Node.js runtimes.<br>- Write parameter parsing logic inside the integrated web code editor engine. | 16/06/2026 | 16/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Investigate secure ingress API proxy endpoints with **Amazon API Gateway**.<br>- Provision a decoupled **REST API** entry system registry called `hoanganh-serverless-api` to route traffic. | 17/06/2026 | 17/06/2026 | API Gateway Docs |
+| Thu | - Create a new network routing resource sub-path named `/products` and bind a **GET** verb execution path to the Lambda function.<br>- Execute an **API Deployment** step publishing to a live environment stage named `prod` to obtain the entry URL. | 18/06/2026 | 18/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Open the **Postman** testing software installed on a local Windows machine to send network test payloads.<br>- Access the cloud consolidated analytics engine **Amazon CloudWatch Logs** to troubleshoot serverless code bugs. | 19/06/2026 | 19/06/2026 | Postman Guide |
 
-### Week 9 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Successfully built a modular serverless backend feature pipeline without needing to deploy or maintain 24/7 active compute cluster host instances.
+- Penned the serverless functional event router logic execution handler (`index.js`) targeting AWS Lambda Node.js runtimes:
+  ```javascript
+  exports.handler = async (event) => {
+      const productId = event.queryStringParameters ? event.queryStringParameters.productId : "Unknown";
+      const response = {
+          statusCode: 200,
+          headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
+          body: JSON.stringify({ status: "Success", data: { id: productId, stock: 99, location: "SG-Warehouse" } }),
+      };
+      return response;
+  };

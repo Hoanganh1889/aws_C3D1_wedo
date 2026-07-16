@@ -5,53 +5,33 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 1 Objectives
 
-### Week 1 Objectives:
+- Connect and get familiar with members of the First Cloud Journey (FCJ) program.
+- Understand the high-level overview of the AWS platform and its core service groups.
+- Get familiar with the AWS Management Console and set up the local working environment on Windows.
+- Launch, configure, and securely remote connect into the first Amazon EC2 virtual server.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Implemented Tasks
 
+| Day | Task | Start Date | End Date | Resource / Documentation |
+|:---:|------|:----------:|:--------:|--------------------------|
+| Mon | - Meet and get familiar with members and Mentors of the FCJ project team.<br>- Read and study the internal regulations, information security policies, and working hours of the organization. | 17/04/2026 | 17/04/2026 | Company Handbook |
+| Tue | - Explore the fundamentals of Cloud Computing (IaaS, PaaS, SaaS).<br>- Study the theory of core AWS service groups:<br>&emsp;+ Compute (EC2)<br>&emsp;+ Storage (S3, EBS)<br>&emsp;+ Networking (VPC)<br>&emsp;+ Database (RDS, DynamoDB) | 20/04/2026 | 20/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Create an AWS Free Tier account using a Windows browser.<br>- Configure basic security for the Root Account by enabling Multi-Factor Authentication (MFA) via Google Authenticator on a mobile device. | 21/04/2026 | 21/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - Download and install the AWS CLI v2 for Windows.<br>- Generate an Access Key ID and Secret Access Key on the IAM Console.<br>- Configure the AWS CLI on Windows PowerShell and practice basic verification commands. | 22/04/2026 | 23/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Deploy an Amazon EC2 virtual server (Ubuntu 22.04 LTS, t2.micro).<br>- Configure a Security Group to open port 22 and port 80.<br>- Troubleshoot private key file `.pem` permission issues via Windows Properties and establish a successful SSH connection.<br>- Create and attach an additional EBS Volume to the instance. | 24/04/2026 | 24/04/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Week 1 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Gained a clear understanding of Cloud Computing concepts and the role of AWS in the cloud industry.
+- Successfully activated an AWS Free Tier account and secured the Root Account using two-factor authentication (MFA).
+- Successfully installed AWS CLI v2 on the Windows operating system. Configured the environment using the command:
+  ```bash
+  aws configure
+  # Configurations: Access Key ID, Secret Access Key, Default Region (ap-southeast-1), Output (json)

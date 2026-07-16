@@ -1,59 +1,37 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
+date: 2026-04-17
 weight: 1
 chapter: false
-pre: " <b> 1.4. </b> "
+pre: "<b>1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+## Mục tiêu tuần 4
 
-### Mục tiêu tuần 4:
+- Cài đặt, cấu hình và quản trị dịch vụ Nginx Web Server trên môi trường Linux Ubuntu.
+- Sử dụng các công cụ giao thức kết nối bảo mật (SFTP) trên Windows để quản lý, truyền tải dữ liệu mã nguồn lên Cloud.
+- Làm chủ kỹ năng xử lý phân quyền bảo mật tệp tin nâng cao trên hệ điều hành Windows.
+- Khởi tạo và thiết lập cơ chế IP tĩnh cố định (Elastic IP) cho máy chủ ứng dụng.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Các công việc triển khai
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Kết nối SSH vào máy chủ EC2 Ubuntu, chạy các tập lệnh cập nhật gói hệ thống mạng nội bộ.<br>- Thực hiện cài đặt dịch vụ Nginx làm ứng dụng Web Server gánh tải. | 11/05/2026 | 11/05/2026 | Tài liệu Linux/Nginx |
+| 3 | - Tải và cài đặt phần mềm quản lý truyền tải dữ liệu **WinSCP** trên Windows.<br>- Cấu hình khởi tạo phiên làm việc (Session) mới qua giao thức bảo mật SFTP sử dụng file cặp khóa `.pem` để liên thông giữa Windows và Linux. | 12/05/2026 | 12/05/2026 | Hướng dẫn WinSCP |
+| 4 | - Sử dụng tính năng kéo-thả trực quan của WinSCP để chuyển bộ mã nguồn trang giao diện web mẫu từ máy Windows lên thư mục lưu trữ gốc của Nginx trên máy chủ AWS.<br>- Sử dụng dòng lệnh Linux cấu hình kiểm tra phân quyền tệp tin hệ thống. | 13/05/2026 | 13/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Nghiên cứu sâu về lỗi phân quyền file khóa (`Permission denied - Warning: Unprotected Private Key File`).<br>- Thực hành dùng lệnh hệ thống hoặc giao diện đồ họa nâng cao trên Windows để cô lập quyền truy cập tệp dữ liệu khóa bí mật. | 14/05/2026 | 14/05/2026 | Tài liệu AWS Security |
+| 6 | - Thực hiện đăng ký và gán địa chỉ IP tĩnh **Elastic IP** vào Instance EC2 để cố định đường dẫn kết nối.<br>- Sử dụng trình duyệt Edge/Chrome trên Windows truy cập kiểm tra hiển thị trang web thông qua địa chỉ IP mới. | 15/05/2026 | 15/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Kết quả đạt được tuần 4:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Kết quả đạt được
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Triển khai cài đặt thành công dịch vụ Nginx Web Server chạy ổn định trên nền tảng Linux đám mây bằng các câu lệnh:
+  ```bash
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install nginx -y
+  sudo systemctl start nginx
+  sudo systemctl enable nginx

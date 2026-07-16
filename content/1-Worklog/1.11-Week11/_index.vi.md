@@ -5,55 +5,33 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+## Mục tiêu tuần 11
 
+- Nghiên cứu triết lý vận hành tự động hóa quy trình phát triển phần mềm theo mô hình CI/CD (Continuous Integration / Continuous Deployment).
+- Thiết lập đường ống tự động giám sát liên thông giữa kho chứa mã nguồn GitHub và môi trường đám mây Cloud AWS.
+- Cấu hình các giai đoạn xử lý dữ liệu tự động (Source Stage, Deploy Stage) trong dịch vụ AWS CodePipeline.
+- Thực hành đẩy lệnh cập nhật mã nguồn (Git Push) từ máy Windows để kiểm thử chu trình tự động hóa triển khai sản phẩm.
 
-### Mục tiêu tuần 11:
+---
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+## Các công việc triển khai
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Tìm hiểu lý thuyết về mô hình tự động hóa DevOps.<br>- Nghiên cứu kiến trúc hoạt động của công cụ đường ống **AWS CodePipeline** và cách thức tạo lập Service Role cấp quyền hoạt động nội bộ dịch vụ. | 29/06/2026 | 29/06/2026 | Tài liệu CodePipeline |
+| 3 | - Khởi tạo một Pipeline mới đặt tên quản trị là `hoanganh-stylehub-pipeline`.<br>- Tại mục cấu hình **Source Stage**, lựa chọn kết nối xác thực tài khoản qua giao thức GitHub (Version 2) trỏ vào đúng Repository đồ án. | 30/06/2026 | 30/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Cấu hình giai đoạn đầu ra **Deploy Stage**: Lựa chọn dịch vụ đích đến là nền tảng quản lý ứng dụng **AWS Elastic Beanstalk** đã dựng sẵn.<br>- Chọn liên kết chính xác tên ứng dụng và môi trường máy chủ đang chạy để nạp luồng dữ liệu tự động. | 01/07/2026 | 01/07/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Mở mã nguồn dự án bằng công cụ **VS Code trên Windows**.<br>- Thực hiện thao tác chỉnh sửa thay đổi một đoạn text giao diện nhỏ tĩnh trên file trang chủ, mở cửa sổ terminal gõ tập lệnh Git truyền thống để thực hiện đẩy code lên internet. | 02/07/2026 | 02/07/2026 | Hướng dẫn Git/GitHub |
+| 6 | - Theo dõi tiến độ chạy đồ thị trực quan của các trạm xử lý trong đường ống trên giao diện Web Console.<br>- Phát hiện và thực hiện chỉnh sửa cấu hình phân quyền hệ thống để xử lý các lỗi ách tắc dữ liệu giữa đường ống và S3 storage. | 03/07/2026 | 03/07/2026 | https://cloudjourney.awsstudygroup.com/ |
 
+---
 
-### Kết quả đạt được tuần 11:
+## Kết quả đạt được
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Thiết lập và vận hành thành công hệ thống đường ống tự động hóa CI/CD hoàn chỉnh khép kín. Loại bỏ hoàn toàn quy trình đóng gói thủ công bằng tay và việc dùng các phần mềm SFTP để upload đè file lên server như giai đoạn trước.
+- Cấu hình liên kết thành công Webhook lắng nghe sự kiện từ nhánh `main` của kho chứa GitHub.
+- Thực thi thành công chuỗi lệnh đẩy mã nguồn cập nhật từ hệ điều hành Windows cá nhân lên hệ thống quản lý phiên bản:
+  ```bash
+  git add .
+  git commit -m "Fix title homepage for AWS pipeline demo"
+  git push origin main

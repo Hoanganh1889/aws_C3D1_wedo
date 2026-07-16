@@ -5,55 +5,33 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+## Mục tiêu tuần 8
 
+- Nghiên cứu kiến trúc phân tán tính sẵn sàng cao (High Availability) dùng Application Load Balancer (ALB).
+- Khởi tạo khuôn mẫu cấu hình máy chủ tự động khởi sinh (Launch Template).
+- Thiết lập nhóm tự động co giãn co giãn (Auto Scaling Group) phân tách hạ tầng đa vùng mạng.
+- Sử dụng các công cụ chuyên dụng trên Windows để thực hiện kiểm thử ép tải (Stress Test) hạ tầng hệ thống đám mây.
 
-### Mục tiêu tuần 8:
+---
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+## Các công việc triển khai
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Vào EC2 Dashboard, tiến hành khởi tạo một bộ cân bằng tải **Application Load Balancer (ALB)** tên `hoanganh-web-alb`.<br>- Khởi tạo một **Target Group** cấu hình cổng dịch vụ, nạp đường dẫn theo dõi kiểm tra sức khỏe hệ thống (**Health Check Path**). | 08/06/2026 | 08/06/2026 | Tài liệu AWS ELB |
+| 3 | - Tạo mới một **Launch Template** định hình sẵn các thông số máy chủ ảo tự động nhân bản bao gồm: AMI Ubuntu, Instance type máy trạm, Security Group mạng.<br>- Nhúng mã lệnh cấu hình tự động cài cắm môi trường web vào phần cấu hình dữ liệu mở rộng **User Data**. | 09/06/2026 | 09/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Thiết lập nhóm tự động co giãn **Auto Scaling Group (ASG)** liên kết trực tiếp với Launch Template.<br>- Quy hoạch phân bổ đều máy chủ ảo vào cả hai vùng mạng `Public-Subnet` đa trung tâm dữ liệu để tăng mức độ chịu tải dự phòng. | 10/06/2026 | 10/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Chỉnh sửa cấu hình kích thước nhóm quản lý máy chủ (Group Size): Đặt mức Desired: 2, Min: 1, Max: 4.<br>- Định nghĩa chính sách co giãn tự động co giãn co giãn (**Target Tracking Scaling Policy**) dựa trên chỉ số mức độ tiêu thụ tài nguyên phần cứng CPU trung bình. | 11/06/2026 | 11/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - Cài đặt công cụ kiểm thử hiệu năng chuyên sâu **Apache JMeter** trên hệ điều hành Windows.<br>- Thiết lập kịch bản giả lập lưu lượng truy cập lớn chạy ép tải liên tục vào địa chỉ DNS định danh của bộ cân bằng tải để theo dõi phản ứng tự động mở rộng mạng của AWS. | 12/06/2026 | 12/06/2026 | Hướng dẫn JMeter |
 
+---
 
-### Kết quả đạt được tuần 8:
+## Kết quả đạt được
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Triển khai thành công kiến trúc hạ tầng tự phục hồi dữ liệu và cân bằng tải phân tán thông minh bằng cách liên kết ALB với Target Group trỏ vào đường dẫn giám sát của mã nguồn: `/actuator/health` (hoặc `/status`).
+- Biên soạn thành công đoạn mã Script tự động triển khai môi trường Web chạy ngầm nhúng vào cấu trúc tệp tin máy chủ (**User Data**):
+  ```bash
+  #!/bin/bash
+  sudo apt update
+  sudo apt install nginx -y
+  sudo systemctl start nginx

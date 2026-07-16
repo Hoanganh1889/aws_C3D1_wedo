@@ -1,59 +1,47 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
+date: 2026-04-17
 weight: 1
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: "<b>1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+## Mục tiêu tuần 2
 
-### Mục tiêu tuần 2:
+- Nghiên cứu cơ chế lưu trữ đối tượng (Object Storage) với Amazon S3.
+- Làm chủ kỹ năng cấu hình phân quyền truy cập, bảo mật tài nguyên S3 (Bucket Policy, Block Public Access).
+- Vận dụng AWS CLI trên Windows để đồng bộ dữ liệu cục bộ lên hạ tầng Cloud.
+- Triển khai chạy thực tế một ứng dụng trang web tĩnh trực tiếp trên Amazon S3.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Các công việc triển khai
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Tìm hiểu lý thuyết Amazon S3 (Bucket, Object, Key, Metadata).<br>- Phân biệt các lớp lưu trữ (Storage Classes) như Standard, Intelligent-Tiering, Standard-IA, Glacier để tối ưu chi phí. | 27/04/2026 | 27/04/2026 | Tài liệu AWS S3 |
+| 3 | - Truy cập S3 Console, tạo một Bucket mới với tên định danh duy nhất tại Region Singapore.<br>- Thực hành Upload/Download thủ công các file hình ảnh dữ liệu mẫu từ máy Windows lên S3 Bucket.<br>- Kích hoạt tính năng Bucket Versioning để quản lý đa phiên bản tệp tin. | 28/04/2026 | 28/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Tìm hiểu cơ chế bảo mật mạng của S3.<br>- Thực hành tắt tính năng Block Public Access.<br>- Viết mã cấu hình Bucket Policy bằng định dạng JSON để mở quyền truy cập đọc công khai cho các tệp tin hình ảnh sản phẩm. | 29/04/2026 | 29/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Sử dụng cửa sổ Windows PowerShell tương tác với S3 thông qua AWS CLI.<br>- Thực hành lệnh tạo bucket (`mb`) và lệnh đồng bộ dữ liệu (`sync`) toàn bộ thư mục asset từ ổ đĩa máy tính Windows lên đám mây. | 30/04/2026 | 30/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - Nghiên cứu tính năng Static Website Hosting trên S3.<br>- Thực hiện cấu hình chỉ định file `index.html` và `error.html` làm trang mặc định.<br>- Upload mã nguồn web tĩnh và kiểm thử truy cập qua đường link Endpoint. | 01/05/2026 | 01/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Kết quả đạt được tuần 2:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Kết quả đạt được
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu rõ nguyên lý hoạt động của S3 Object Storage và phân biệt được sự khác biệt với Block Storage (EBS).
+- Khởi tạo thành công S3 Bucket có bật tính năng **Bucket Versioning**, cho phép ghi đè và khôi phục các phiên bản cũ của tệp tin một cách an toàn.
+- Viết và áp dụng thành công đoạn mã cấu hình **Bucket Policy** (JSON) cho phép người dùng bên ngoài đọc file ảnh sản phẩm mà không làm lộ quyền quản trị:
+  ```json
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "PublicReadGetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": "s3:GetObject",
+              "Resource": "arn:aws:s3:::hoanganh-stylehub-bucket/*"
+          }
+      ]
+  }

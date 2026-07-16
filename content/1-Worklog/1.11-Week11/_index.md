@@ -5,53 +5,34 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 11 Objectives
 
-### Week 11 Objectives:
+- Study automated application lifecycle release lifecycles utilizing CI/CD (Continuous Integration / Continuous Deployment) methodologies.
+- Setup automated sync delivery pipelines linking remote GitHub code repositories to the AWS cloud infrastructure.
+- Configure independent deployment stage actions (Source Stage, Deploy Stage) using AWS CodePipeline.
+- Perform remote code modification delivery triggers (`git push`) from Windows to test the deployment pipeline.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Implemented Tasks
 
+| Day | Task | Start Date | End Date | Resource / Documentation |
+|:---:|------|:----------:|:--------:|--------------------------|
+| Mon | - Research DevOps automation philosophies and pipeline architectures.<br>- Study **AWS CodePipeline** operations and learn how to construct Service Roles to permit automated cross-service actions. | 29/06/2026 | 29/06/2026 | CodePipeline Documentation |
+| Tue | - Initialize a new pipeline entity named `hoanganh-stylehub-pipeline`.<br>- At the **Source Stage** wizard panel, set the source provider to GitHub (Version 2) and authenticate the target repository. | 30/06/2026 | 30/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Configure the downstream output node (**Deploy Stage**): Route code targets toward the managed **AWS Elastic Beanstalk** instance stack built in week 7.<br>- Bind the deployment pipeline to the exact app registry and environment name. | 01/07/2026 | 01/07/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - Open the source project files using **VS Code on Windows**.<br>- Perform minor modifications to static layout text elements on the index homepage file, open the integrated git shell, and push revisions to the repository. | 02/07/2026 | 02/07/2026 | Git/GitHub Version Guides |
+| Fri | - Monitor pipeline stage progress visualizations on the AWS Management Console web interface.<br>- Identify and resolve permission-related pipeline jams occurring between the automated code orchestrator and S3 storage zones. | 03/07/2026 | 03/07/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Week 11 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Successfully designed and operated a continuous automated software deployment loop (CI/CD), eliminating manual compilation builds and old file overwrite tasks over SFTP.
+- Configured a webhook listener to monitor push events on the `main` branch of the GitHub repository.
+- Successfully executed remote codebase updates from the local Windows terminal to the cloud repository system:
+  ```bash
+  git add .
+  git commit -m "Fix title homepage for AWS pipeline demo"
+  git push origin main

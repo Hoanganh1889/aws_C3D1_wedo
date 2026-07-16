@@ -5,53 +5,43 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 2 Objectives
 
-### Week 2 Objectives:
+- Study the mechanisms of object storage using Amazon S3.
+- Master the configuration of access control and resource security on S3 (Bucket Policy, Block Public Access).
+- Utilize the AWS CLI on Windows to synchronize local data to the Cloud infrastructure.
+- Deploy a live static website directly on Amazon S3.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Implemented Tasks
 
+| Day | Task | Start Date | End Date | Resource / Documentation |
+|:---:|------|:----------:|:--------:|--------------------------|
+| Mon | - Study the theory of Amazon S3 (Bucket, Object, Key, Metadata).<br>- Differentiate S3 Storage Classes (Standard, Intelligent-Tiering, Standard-IA, Glacier) to optimize infrastructure costs. | 27/04/2026 | 27/04/2026 | AWS S3 Documentation |
+| Tue | - Access the S3 Console and create a new Bucket with a globally unique name in the Singapore Region.<br>- Practice uploading and downloading sample image assets from a local Windows machine to the S3 Bucket.<br>- Enable Bucket Versioning to manage multi-version files. | 28/04/2026 | 28/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Study the network security mechanisms of S3.<br>- Disable the Block Public Access feature.<br>- Compose and apply a Bucket Policy in JSON format to grant public read permissions (`s3:GetObject`) for product images. | 29/04/2026 | 29/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - Interact with S3 via AWS CLI using Windows PowerShell.<br>- Execute bucket creation (`mb`) and data synchronization (`sync`) commands to upload asset directories from the local Windows drive to the cloud. | 30/04/2026 | 30/04/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Investigate the Static Website Hosting feature on Amazon S3.<br>- Configure designated file paths for `index.html` and `error.html` as default routing pages.<br>- Upload static web source code and test access via the public S3 Endpoint URL. | 01/05/2026 | 01/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Week 2 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood the core concepts of S3 Object Storage and distinguished it from Block Storage (EBS).
+- Successfully initialized an S3 Bucket with **Bucket Versioning** enabled, allowing safe file overwrite and historical version recovery.
+- Developed and applied a valid **Bucket Policy** (JSON) to allow external clients to fetch product images without compromising root administrative rights:
+  ```json
+  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "PublicReadGetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": "s3:GetObject",
+              "Resource": "arn:aws:s3:::hoanganh-stylehub-bucket/*"
+          }
+      ]
+  }

@@ -5,53 +5,34 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 8 Objectives
 
-### Week 8 Objectives:
+- Study highly available (HA) distributed network patterns using an Application Load Balancer (ALB).
+- Formulate a baseline machine configuration scheme for auto-scaling deployments (Launch Templates).
+- Provision an Auto Scaling Group (ASG) distributing virtual nodes across distinct Multi-AZ subnet boundaries.
+- Employ automated load stress simulation tools on Windows to evaluate the resiliency of the cloud architecture.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+## Implemented Tasks
 
+| Day | Task | Start Date | End Date | Resource / Documentation |
+|:---:|------|:----------:|:--------:|--------------------------|
+| Mon | - Access the EC2 Console and initialize an **Application Load Balancer (ALB)** named `hoanganh-web-alb`.<br>- Create a **Target Group**, configure runtime listening rules, and assign health check parameters. | 08/06/2026 | 08/06/2026 | AWS ELB Documentation |
+| Tue | - Construct a new **Launch Template** defining hardware blueprints for cloned instances, covering: Ubuntu AMIs, compute sizing types, and security boundaries.<br>- Inject startup boot environment setup shell script commands inside the **User Data** section. | 09/06/2026 | 09/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Wed | - Bind an **Auto Scaling Group (ASG)** named `hoanganh-asg` directly to the active Launch Template baseline.<br>- Spread the virtual nodes across multiple `Public-Subnet` multi-AZ data center nodes to increase high availability. | 10/06/2026 | 10/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Thu | - Configure group capacity boundaries: Set Desired to 2, Min to 1, and Max to 4 instances.<br>- Set up an automated scaling rules configuration (**Target Tracking Scaling Policy**) based on average hardware CPU utilization metrics. | 11/06/2026 | 11/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| Fri | - Set up the performance validation utility toolkit **Apache JMeter** on Windows.<br>- Build an intensive query traffic load script aiming directly at the public load balancer DNS endpoint to observe auto-scaling triggers. | 12/06/2026 | 12/06/2026 | Apache JMeter Guide |
 
-### Week 8 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Outcomes
 
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Successfully implemented a self-healing and load-balanced application architecture by binding the ALB to a target group pointing to the source monitor endpoints: `/actuator/health` (or `/status`).
+- Wrote an automated machine boot deployment shell script embedded into the instance launch profile configuration metadata (**User Data**):
+  ```bash
+  #!/bin/bash
+  sudo apt update
+  sudo apt install nginx -y
+  sudo systemctl start nginx

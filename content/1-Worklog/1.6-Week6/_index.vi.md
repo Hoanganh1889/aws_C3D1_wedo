@@ -5,54 +5,35 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+## Mục tiêu tuần 6
 
+- Nghiên cứu mô hình và tư duy lưu trữ phi cấu trúc NoSQL Key-Value với Amazon DynamoDB.
+- Khởi tạo bảng dữ liệu phi quan hệ, tối ưu cấu hình phân bổ tài nguyên lưu trữ theo nhu cầu sử dụng (On-Demand).
+- Thực hành thao tác xử lý dữ liệu phức hợp (Document JSON) trực tiếp trên giao diện đám mây.
+- Sử dụng công cụ dòng lệnh AWS CLI trên Windows để thực thi các câu lệnh quét (Scan) và truy vấn (Query) dữ liệu nâng cao.
 
-### Mục tiêu tuần 6:
+---
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+## Các công việc triển khai
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+|:---:|-----------|:------------:|:---------------:|----------------|
+| 2 | - Nghiên cứu lý thuyết thiết kế cấu trúc dữ liệu NoSQL (Schemaless).<br>- Phân tích cách thức phân tách và chọn định danh cho khóa chính bao gồm: **Partition Key** (Khóa phân vùng) và **Sort Key** (Khóa sắp xếp). | 25/05/2026 | 25/05/2026 | Tài liệu DynamoDB |
+| 3 | - Vào dịch vụ DynamoDB, thực hiện tạo bảng dữ liệu mang tên `Products_Cache`. Thiết lập thuộc tính Partition Key là `ProductID` (Kiểu String).<br>- Chỉnh sửa mục cấu hình tính phí, chuyển sang chế độ **On-Demand** để tối ưu hóa ngân sách tài khoản sinh viên. | 26/05/2026 | 26/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Sử dụng bảng điều khiển web *Explore items* để thực hiện các thao tác thêm, sửa, xóa dữ liệu (CRUD).<br>- Thực hành định nghĩa các dòng bản ghi chứa các cấu trúc thuộc tính động không đồng nhất (đặc trưng linh hoạt của NoSQL). | 27/05/2026 | 27/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Sử dụng công cụ **Windows PowerShell** chạy các câu lệnh AWS CLI để truy xuất quét lấy toàn bộ mảng dữ liệu từ xa.<br>- Nghiên cứu chuyên sâu phân biệt hiệu năng và chi phí vận hành giữa hai tập lệnh: **Scan** và **Query**. | 28/05/2026 | 28/05/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - Xử lý vấn đề lỗi xung đột ký tự định dạng chuỗi JSON khi gõ lệnh trực tiếp trên Windows Terminal.<br>- Thực hành biên soạn tệp tin cấu hình điều kiện dạng file tĩnh độc lập để truyền tải đối số dữ liệu an toàn. | 29/05/2026 | 29/05/2026 | https://cloudjourney.awsstudygroup.com/ |
 
+---
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+## Kết quả đạt được
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Khởi tạo thành công hệ thống dữ liệu phi quan hệ **Amazon DynamoDB** vận hành theo cơ chế Serverless hoàn toàn, có năng lực tự động co giãn băng thông theo lưu lượng thực tế.
+- Thực hành nạp thành công các Item mẫu định dạng cấu trúc JSON phong phú dữ liệu:
+  ```json
+  {
+    "ProductID": {"S": "P001"},
+    "ProductName": {"S": "iPhone 15 Pro Max"},
+    "Price": {"N": "30000000"},
+    "Attributes": {"M": {"Color": {"S": "Titanium"}, "Storage": {"S": "256GB"}}}
+  }
