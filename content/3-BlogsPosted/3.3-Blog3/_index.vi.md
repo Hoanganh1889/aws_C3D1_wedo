@@ -16,7 +16,7 @@ Bài viết chia sẻ một giải pháp kiến trúc thực chiến giúp tăng
 * **Bảo mật thông tin (Security & Credentials):** Tích hợp AWS Secrets Manager để lưu trữ và quản lý an toàn chuỗi kết nối cơ sở dữ liệu (Database Credentials), loại bỏ hoàn toàn rủi ro hardcode trong source code.
 * **Kiến trúc mạng an toàn (Network Isolation):** Cơ sở dữ liệu RDS và cụm ElastiCache được đặt an toàn tuyệt đối bên trong Private Subnet, chỉ cho phép kết nối nội bộ từ cụm ECS.
  
-![Sơ đồ kiến trúc Cache-Aside](/images/3-blogsposted/blog3.jpg)
+<img src="/images/3-blogsposted/blog3.jpg" alt="Sơ đồ kiến trúc Cache-Aside" width="900"/>
 
 **Hướng dẫn triển khai chi tiết:**
  
