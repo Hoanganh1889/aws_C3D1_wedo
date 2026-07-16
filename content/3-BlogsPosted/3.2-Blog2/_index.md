@@ -16,7 +16,6 @@ pre: " <b> 3.2. </b> "
 
 **Evaluation**: The solution effectively addresses Java's Cold Start challenge, supports seamless auto-scaling, and optimizes operational costs for enterprises undergoing system modernization or transitioning to Microservices.
 
-<img src="/images/3-blogsposted/blog2.png" alt="AI Diet Tracker Architecture Diagram" width="900"/>
-
+![AI Diet Tracker Architecture Diagram](images/3-blogsposted/blog2.png)
 
 

@@ -183,5 +183,5 @@ The event also created opportunities to interact with speakers, interns, and oth
 - The AWS Cloud Practitioner certification is an important starting point for a cloud career path.
 - Continuous learning and regular practice are essential factors for growth in Cloud Computing and DevOps.
 
-<img src="/images/4-EventParticipated/event2.jpg" alt="Image Event" width="800"/>
-<img src="/images/4-EventParticipated/event2.1.jpg" alt="Image Event" width="800"/>
+![Image Event](/images/4-EventParticipated/event2.jpg) 
+![Image Event](/images/4-EventParticipated/event2.1.jpg)
