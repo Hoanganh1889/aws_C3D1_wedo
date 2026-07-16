@@ -12,7 +12,7 @@
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 🌐 [Báo cáo Workshop cá nhân](https://hoanganh1889.github.io/aws_C3D1_wedo/) &nbsp; | &nbsp;
-🎥 [Video Demo](https://www.youtube.com/) &nbsp; | &nbsp;
+🎥 [Video Demo]([https://www.youtube.com/](https://drive.google.com/file/d/19jLMrXjSZSN6gKfXB3MJ4Kub92MRf-f-/view?usp=drive_link)) &nbsp; | &nbsp;
 🚀 [Trải nghiệm WeDo Workspace](http://wedo-frontend-2026.s3-website-ap-southeast-1.amazonaws.com/)
 
 </div>
