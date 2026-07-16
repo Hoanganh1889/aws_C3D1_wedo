@@ -102,13 +102,11 @@ AWS_C3D1_WEDO/
 
 ## 🚀 Triển khai hệ thống (Deployment)
 
-Hệ thống được triển khai theo mô hình CI/CD với GitHub Actions:
+Hệ thống hiện tại thỏa mãn các tiêu chuẩn của AWS Well-Architected Framework:
 
-1. Push source code lên GitHub
-2. GitHub Actions tự động build Hugo site
-3. Deploy lên GitHub Pages
-4. Frontend React deploy lên S3 + CloudFront
-5. Backend Spring Boot deploy lên ECS Fargate
+High Availability: Triển khai Multi-AZ với VPC, ALB, NAT Gateway và RDS.
+Security: Private Subnets, WAF, Secrets Manager, IAM phân quyền least-privilege.
+Scalability: Sử dụng Serverless ECS Fargate tự động mở rộng theo tải.
 
 ### Production URLs
 
