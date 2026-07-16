@@ -1,6 +1,6 @@
 baseURL = "https://hoanganh1889.github.io/aws_C3D1_wedo/"
-relativeURLs = false
-canonifyURLs = false
+relativeURLs = true
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Theme
