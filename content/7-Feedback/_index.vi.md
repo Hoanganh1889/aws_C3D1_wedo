@@ -9,7 +9,7 @@ pre: " <b> 7. </b> "
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc chuyên nghiệp, thân thiện và cởi mở, tạo điều kiện thuận lợi để thực tập sinh nhanh chóng hòa nhập với công việc. Đồng nghiệp luôn sẵn sàng hỗ trợ, chia sẻ kinh nghiệm và phối hợp hiệu quả, giúp quá trình làm việc diễn ra thuận lợi và đạt hiệu quả cao.
+Môi trường làm việc rất chuyên nghiệp, thân thiện và cởi mở, tạo điều kiện thuận lợi để thực tập sinh nhanh chóng hòa nhập với công việc. Đồng nghiệp luôn sẵn sàng hỗ trợ, chia sẻ kinh nghiệm và phối hợp hiệu quả, giúp quá trình làm việc diễn ra thuận lợi và đạt hiệu quả cao.
 
 **2. Sự hỗ trợ của mentor / team admin**  
 Mentor luôn hướng dẫn tận tình, giải thích rõ ràng các nội dung chuyên môn và sẵn sàng giải đáp mọi thắc mắc trong quá trình thực hiện công việc. Bên cạnh đó, Mentor khuyến khích tôi chủ động tìm hiểu và tự giải quyết vấn đề để nâng cao tư duy và khả năng làm việc độc lập. Team Admin cũng hỗ trợ đầy đủ về tài liệu, quy trình và các thủ tục cần thiết, giúp quá trình thực tập diễn ra thuận lợi.
